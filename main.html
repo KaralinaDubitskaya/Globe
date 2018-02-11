@@ -5,27 +5,38 @@
 	<title>Main page</title>
 	<!-- Browser charset -->
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- CSS file -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
-<div id="container">
-	<div>
+<div id="container" class="container-fluid">
+	<div id="top" class="row">
 		<!-- Header -->
-		<div id="header">
+		<div id="header" class="col-3">
+			<!-- Logo image> -->
+			<div>
+				<img src="img/logo.jpg" alt="Логотип клуба" height="40%" width="40%">
+			</div>
+
+			<!-- Header text -->
+			<p id="headerText">
+				Литературный клуб "Глобус"
+			</p>
 		</div>
 
 		<!-- Navigation -->
-		<div id="navigation">
+		<div id="navigation" class="col-9">
 		</div>
 	</div>
 
-	<div>
+	<div id="main" class="row">
 		<!-- Sidebar -->
-		<nav id="sidebar">
+		<nav id="sidebar" class="col-3">
 			<!-- Sidebar header -->
 			<div class="sidebar-header">
 				<h3>Главная</h3>
@@ -35,16 +46,23 @@
 			<ul class="sidebar-links">
 				<li class="active"><a href="#">Литературный клуб</a></li>
 				<li><a href="#">О проекте</a></li>
-			</ul>
+			</ul> 
 		</nav>
 
+
 		<!-- Page content -->
-		<div id="content">
+		<div id="content" class="col-9">
+			<div>Описание направления тренинга
+BI – это технологии и инструменты для организации хранилищ данных и аналитических систем для принятия управленческих решений. Программа тренинга - шанс стать успешным разработчиком, консультантом в быстро развивающейся Business Intelligence области, широко востребованной среди отечественных и зарубежных предприятий.
+
+Необходимые знания и умения
+Требования к кандидатам:
+.</div>
 		</div>
 	</div>
 
 	<!-- Footer -->
-	<div id="footer">
+	<div id="footer" class="row">
 	</div>
 </div>
 

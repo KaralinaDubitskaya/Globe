@@ -1,0 +1,51 @@
+body {
+}
+
+#container {
+	
+}
+
+
+#top {
+	width: auto;
+	height: 40%;
+	min-height: 40px;
+	border-bottom: solid 1px #eee;
+}
+
+#header {
+	min-width: 130px;
+	background: #87ceeb;
+}
+
+#navigation {
+	background: #f3fafd;
+}
+
+#main {
+	min-height: 570px;
+}
+
+#sidebar {
+}
+
+.sidebar-header {
+	
+}
+
+.sidebar-links {
+
+}
+
+#content {
+}
+
+#footer {
+	bottom: 0;
+	width: auto;
+	height: 20%;
+	background: #eeeeee;
+	border-top: solid 1px #ddd;
+	min-height: 60px;
+}
+
