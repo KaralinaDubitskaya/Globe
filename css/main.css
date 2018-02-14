@@ -1,32 +1,54 @@
-body {
+.pageContent {
+	font-family: 'Montserrat', sans-serif; 
 }
 
-#container {
-	
-}
-
-
-#top {
-	width: auto;
-	height: 40%;
-	min-height: 40px;
-	border-bottom: solid 1px #eee;
-}
-
-#header {
-	min-width: 130px;
+.top {
+	border-bottom: solid 1px #eee;	
 	background: #87ceeb;
 }
 
-#navigation {
+.header {
+	font-weight: 500;
+	padding-left: 2%;
+	width: 25%;
+	min-width: 250px;
+}
+
+.navigationBar {
+	position: relative;
+	font-weight: 400;
+	min-width: 75%;
 	background: #f3fafd;
 }
 
-#main {
+.navigationBar ul {
+	position: absolute;
+	bottom: 0; 
+	right: 0;  
+	list-style-type: none;
+} 
+ 
+.navigationBar ul li {  
+	display: inline;
+} 
+ 
+.navigationBar ul li a { 
+	padding: 0.2em 1em;
+	display: inline-block;
+	text-decoration: none; 
+	color: #000;
+} 
+ 
+.navigationBar ul li a:hover { 
+	color:  #005b96; 
+	background-color: #fff; 
+} 
+
+.main {
 	min-height: 570px;
 }
 
-#sidebar {
+.sidebar {
 }
 
 .sidebar-header {
@@ -37,10 +59,10 @@ body {
 
 }
 
-#content {
+.content {
 }
 
-#footer {
+.footer {
 	bottom: 0;
 	width: auto;
 	height: 20%;
@@ -49,3 +71,30 @@ body {
 	min-height: 60px;
 }
 
+@media screen and (max-width: 1400px) {
+	.navigationBar {
+		position: relative;
+		font-weight: 400;
+		width: 100%;
+		background: #f3fafd;
+		text-align: center;
+	}
+
+	.navigationBar ul { 
+		position: relative;
+		margin: 0; 
+		padding: 5px; 
+		list-style-type: none;
+		} 
+	 
+	.navigationBar ul li {  
+		display: inline;
+		} 
+
+	.navigationBar ul li a { 
+	display: inline-block;
+	text-decoration: none; 
+	padding: 0.2em 1em;
+	color: #000;
+	} 
+}
