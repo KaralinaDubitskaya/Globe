@@ -115,6 +115,34 @@
 	min-height: 60px;
 }
 
+/* Colored share icons */
+.social-color a {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	color: #fff;
+	width: 3em;
+	height: 3em;
+	border-radius: 1.5em;
+	line-height: 3em;
+	font-size: 1.2em;
+	vertical-align: bottom;
+	text-align: center;
+	border: solid 1px #45b3e0;
+	color: #45b3e0;
+	background: #fff;
+}
+
+.social-color a:hover, p.social a:focus  {
+	color: #005b96;
+	border-color: #005b96;
+	text-decoration: none;
+}
+
+.social-color a i {
+	vertical-align: middle;
+}
+
+
 @media screen and (max-width: 1400px) {
 	.navigationBar {
 		position: relative;
