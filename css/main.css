@@ -3,7 +3,7 @@
 }
 
 .top {
-	border-bottom: solid 1px #eee;	
+	border-bottom: solid 1px #bfbfbf;	
 	background: #87ceeb;
 }
 
@@ -12,6 +12,7 @@
 	padding-left: 2%;
 	width: 25%;
 	min-width: 250px;
+	border-left: solid 1px #bfbfbf;
 }
 
 .navigationBar {
@@ -45,18 +46,61 @@
 } 
 
 .main {
-	min-height: 570px;
+	min-height: 730px;	
+	display: flex;
+	align-items: stretch;
 }
 
 .sidebar {
+	min-width: 250px;
+	width: 25%;
+	padding-top: 3%;
+	padding-left: 2%;
+	border-right: solid 1px #bfbfbf;
+	background: #c9e9f6;
 }
 
 .sidebar-header {
-	
+	padding-top: 2%;
 }
 
-.sidebar-links {
+.sidebar-links li {
+	padding: 0.5%;
+}
 
+.sidebar-links li a {
+	color: black;
+}
+
+.sidebar-links li a:hover {
+	color:  #005b96;
+	text-decoration: none;
+}
+
+/* Monochromatic share icons */
+.social a {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	color: #fff;
+	width: 3em;
+	height: 3em;
+	border-radius: 1.5em;
+	line-height: 3em;
+	font-size: 1.2em;
+	vertical-align: bottom;
+	text-align: center;
+	border: solid 1px #969696;
+	color: #969696;
+}
+
+.social a:hover, p.social a:focus  {
+	color: #005b96;
+	border-color: #005b96;
+	text-decoration: none;
+}
+
+.social a i {
+	vertical-align: middle;
 }
 
 .content {
@@ -67,7 +111,7 @@
 	width: auto;
 	height: 20%;
 	background: #eeeeee;
-	border-top: solid 1px #ddd;
+	border-top: solid 1px #bfbfbf;
 	min-height: 60px;
 }
 
@@ -77,7 +121,9 @@
 		font-weight: 400;
 		width: 100%;
 		background: #f3fafd;
-		text-align: center;
+		text-align: center;	
+		border-bottom: none;
+		border-top: solid 1px #bfbfbf;
 	}
 
 	.navigationBar ul { 
@@ -85,16 +131,29 @@
 		margin: 0; 
 		padding: 5px; 
 		list-style-type: none;
-		} 
+	} 
 	 
 	.navigationBar ul li {  
 		display: inline;
-		} 
+	} 
 
 	.navigationBar ul li a { 
-	display: inline-block;
-	text-decoration: none; 
-	padding: 0.2em 1em;
-	color: #000;
+		display: inline-block;
+		text-decoration: none; 
+		padding: 0.2em 1em;
+		color: #000;
 	} 
+
+	.sidebar {
+		width: 100%;
+		background: #fff;
+		border-right: none;
+	}
+
+	.social a {
+		border: solid 1px #ccc;
+		color: #ccc;
+	}
 }
+
+
