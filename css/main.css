@@ -31,7 +31,15 @@
  
 .navigationBar ul li {  
 	display: inline;
+	float: left;
+	margin-right: 0px;
+	border-right: 1px solid #aaa;
+	padding: 0 20px;
 } 
+
+.navigationBar ul li:last-child {
+	border-right: none;
+}
  
 .navigationBar ul li a { 
 	padding: 0.2em 1em;
@@ -41,8 +49,7 @@
 } 
  
 .navigationBar ul li a:hover { 
-	color:  #005b96; 
-	background-color: #fff; 
+	color:  #005b96;  
 } 
 
 .main {
@@ -113,6 +120,18 @@
 	background: #eeeeee;
 	border-top: solid 1px #bfbfbf;
 	min-height: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.footerContact {
+	margin: 2%;
+}
+
+.footerContactHeader {
+	margin: 3%;
 }
 
 /* Colored share icons */
@@ -142,6 +161,28 @@
 	vertical-align: middle;
 }
 
+.footerNavigation {
+	display: flex;
+	flex-direction: row;
+}
+
+.footerNavigation li {
+	padding: 3% 20%;
+}
+
+.footerNavigation li a {
+	padding-left: 6px;
+	color: black; 
+}
+
+.footerNavigation li a:hover {
+	color:  #005b96;
+	text-decoration: none;
+}
+
+.footerText {
+	margin: 0 10px 10px 0;
+}
 
 @media screen and (max-width: 1400px) {
 	.navigationBar {
@@ -163,7 +204,11 @@
 	 
 	.navigationBar ul li {  
 		display: inline;
-	} 
+		float: none;
+		margin-right: none;
+		border-right: none;
+		padding: none;
+	}  
 
 	.navigationBar ul li a { 
 		display: inline-block;
@@ -171,6 +216,11 @@
 		padding: 0.2em 1em;
 		color: #000;
 	} 
+
+	.navigationBar ul li a:hover { 
+		color:  #005b96; 
+		background-color: #fff; 
+	}
 
 	.sidebar {
 		width: 100%;
