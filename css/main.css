@@ -49,8 +49,29 @@
 } 
  
 .navigation-bar ul li a:hover { 
-	color:  #005b96;  
+	color:  #005b96; 
 } 
+
+.sub-menu {
+	display: none;
+}
+
+.sub-menu li {
+	text-decoration: none;
+	margin-left: 5%;
+}
+
+.sub-menu li a {
+	margin-left: 5px;
+}
+
+.nav-menu ul li:hover > ul {
+   display: block;
+}
+
+.nav-menu ul li:hover > i {
+   
+}
 
 .main {
 	min-height: 730px;	
@@ -322,6 +343,10 @@
 
 	.content {
 		width: 100%;
+	}
+
+	.sub-menu {
+		display: block;
 	}
 
 	.footer {
