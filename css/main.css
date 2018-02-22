@@ -257,6 +257,13 @@ input[type="radio"] {
     vertical-align: text-bottom;
 }
 
+.styled-select {
+   height: 2.5em;
+   overflow: hidden;
+   display: inline-block;
+   min-width: 20%;
+}
+
 .bottom-border {
 	border-bottom: solid 1px #bfbfbf;
 }
@@ -435,5 +442,7 @@ input[type="radio"] {
 	}
 
 }
+
+
 
 

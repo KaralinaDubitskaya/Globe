@@ -91,7 +91,7 @@
 		<!-- Page content -->
 		<div class="content">
 			<!-- Main info about user -->
-			<div class="content-block bottom-border"><a name="User"></a>
+			<div class="content-block bottom-border">
 				<h3 class="content-header">Контактные данные</h3>
 				<div class="content-block">
 					<!-- Username -->
@@ -115,10 +115,8 @@
 							    <div class="radio-input">
 							        <input type="radio" name="sexRadios" value="Female" checked> Женский
 							    </div>
-							    <div>
-							    	<p class="radio-input">
-							        	<input type="radio" name="sexRadios" value="Male"> Мужской
-							        </p>
+							    <div class="radio-input">
+							        <input type="radio" name="sexRadios" value="Male"> Мужской
 							    </div>
 							</div>
 						</div>
@@ -170,7 +168,7 @@
 			</div>
 
 			<!-- Literary preferences -->
-			<div class="content-block bottom-border"><a name="Preferences"></a>
+			<div class="content-block bottom-border">
 				<h3 class="content-header">Литературные предпочтения</h3>
 				<div class="content-block">
 					<!-- Genres -->
@@ -217,18 +215,37 @@
 			</div>
 
 			<!-- User comment -->
-			<div class="content-block bottom-border"><a name="About"></a>
-				<h3 class="content-header">Оставьте отзыв на:</h3>
+			<div class="content-block bottom-border">
+				<h3 class="content-header">Ваше мнение</h3>
+				<div>
+					<!-- Select-box -->
+					<div class="content-small-block">
+						<div>
+							<p class="">Оставьте отзыв на:</p>
+						</div>
+				    	<select class="styled-select">
+					        <option>Книгу</option>
+					        <option>Автора</option>
+					        <option>Наш сайт</option>
+				    	</select>
+				    </div>
+
+				    <!-- Textarea -->
+				    <div class="content-small-block">
+				    	<textarea class="form-control" rows="15"></textarea>
+				    </div>
+				</div>
 			</div>
 
 			<!-- Thanks -->
-			<div>
-				
+			<div class="content-small-block">
+				<p>Спасибо за предоставленную информацию! <i class="glyphicon glyphicon-grain" aria-hidden="true"></i>
+</p>
 			</div>
 
 			<!-- Submit button -->
-			<div>
-				
+			<div class="content-small-block">
+				<button type="button" class="btn btn-primary">Отправить <i class="glyphicon glyphicon-send" aria-hidden="true"></i></button>
 			</div>
 		</div>
 	</div>
