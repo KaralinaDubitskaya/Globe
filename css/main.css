@@ -185,9 +185,6 @@ li {
 	margin: 2%;
 }
 
-.content-genre {
-}
-
 .content-subheader {
 	color: #15487b;
 }
@@ -227,19 +224,13 @@ li {
 	color: #82afc3;
 }
 
-.form-group {
-	padding: 2% 7% 0% 7%;
-}
-
 .col-form-label {
 	display: inline-block;
-	width: 30%;
 	padding: 10px;
 }
 
 .col-form-input {
 	padding-left: 10px;
-	width: 70%;
 	padding-bottom: 3%;
 }
 
@@ -256,6 +247,10 @@ li {
 
 .half-block {
 	width: 50%;
+}
+
+.full-width {
+	width: 100%;
 }
 
 input[type="radio"] {
@@ -409,11 +404,11 @@ input[type="radio"] {
 	}
 
 	.col-form-label {
-		width: auto;
+		width: 100%;
 	}
 
 	.col-form-input {
-		width: auto;
+		width: 100%;
 	}
 
 	.footer {
