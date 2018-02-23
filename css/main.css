@@ -101,6 +101,10 @@ li {
 	padding-top: 2%;
 }
 
+.sidebar-block {
+	margin: 5%;
+}
+
 .sidebar-links li {
 	padding: 0.5%;
 }
