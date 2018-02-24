@@ -168,8 +168,8 @@ li {
 
 /* Go to the top of the page */
 .button-top {
-	padding:10%;
-	cursor:pointer;
+	padding: 10%;
+	cursor: pointer;
 	position: absolute;
 	bottom: 0;
 	display: inline;
