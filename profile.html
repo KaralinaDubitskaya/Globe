@@ -43,7 +43,7 @@
 				<li><a href="new.html">Новинки</a></li> 
 				<li><a href="top.html">Лучшее</a></li> 
 				<li><a href="authors.html">Авторы</a></li> 
-				<li><a href="profile.html">Профиль</a></li> 
+				<li><a href="profile.php">Профиль</a></li> 
  			 </ul> 
 		</div>
 	</div>
@@ -110,8 +110,8 @@
 		</nav>
 
 
-		<!-- Page content -->
-		<div class="content">
+		<!-- Page content (form) -->
+		<form class="content {FORM}" name="form" method="POST" action="profile.php">
 			<!-- Main info about user -->
 			<div class="content-block bottom-border">
 				<h3 class="content-header">Контактные данные</h3>
@@ -122,7 +122,7 @@
 							<p class="col-form-label">Имя/Логин</p>
 						</div>
 					    <div class="full-width col-form-input">
-						    <input class="form-control" type="text" placeholder="Введите Ваше имя (логин)">
+						    <input class="form-control" type="text" placeholder="Введите Ваше имя (логин)" name="login">
 						    <small class="form-text text-muted">*Используйте его в дальнейшем; это поможет улучшить наш сайт.</small>
 					    </div>
 					</div>
@@ -149,7 +149,7 @@
 								<p class="col-form-label">Возраст</p>
 							</div>
 						    <div class="col-form-input">
-							    <input class="form-control" type="text">
+							    <input class="form-control" type="text" name="age">
 						    </div>
 						</div>
 					</div>
@@ -161,7 +161,7 @@
 								<p class="col-form-label">Страна/Город</p>
 							</div>
 						    <div class="col-form-input">
-							    <input class="form-control" type="text">
+							    <input class="form-control" type="text" name="address">
 						    </div>
 						</div>
 
@@ -171,7 +171,7 @@
 								<p class="col-form-label">Телефон</p>
 							</div>
 						    <div class="col-form-input">
-							    <input class="form-control" type="text">
+							    <input class="form-control" type="text" name="phone">
 						    </div>
 						</div>
 					</div>
@@ -182,7 +182,7 @@
 							<p class="col-form-label">Email</p>
 						</div>
 					    <div class="col-form-input full-width">
-						    <input class="form-control" type="text">
+						    <input class="form-control" type="text" name="email">
 					    </div>
 					</div>
 
@@ -199,7 +199,7 @@
 							<p class="col-form-label">Предпочитаемые жанры</p>
 						</div>
 					    <div class="full-width col-form-input">
-						    <input class="form-control" type="text" placeholder="Детективы, фантастика, лирика и т.д.">
+						    <input class="form-control" type="text" placeholder="Детективы, фантастика, лирика и т.д." name="genres">
 					    </div>
 					</div>
 
@@ -209,7 +209,7 @@
 							<p class="col-form-label">Любимые авторы</p>
 						</div>
 					    <div class="full-width col-form-input">
-						    <input class="form-control" type="text" placeholder="Агата Кристи, Стивен Кинг и т.д.">
+						    <input class="form-control" type="text" placeholder="Агата Кристи, Стивен Кинг и т.д." name="author">
 					    </div>
 					</div>
 
@@ -219,17 +219,17 @@
 							<p class="col-form-label">Интересные книги</p>
 						</div>
 					    <div class="full-width col-form-input">
-						    <input class="form-control" type="text" placeholder="&#34;Код Да Винчи&#34;, &#34;Происхождение&#34; и т.д.">
+						    <input class="form-control" type="text" placeholder="&#34;Код Да Винчи&#34;, &#34;Происхождение&#34; и т.д." name="books">
 					    </div>
 					</div>
 
-					<!-- Genres -->
+					<!-- News -->
 					<div class="row content-small-block">
 						<div>
 							<p class="col-form-label">Новинки, которые вы бы хотели прочитать</p>
 						</div>
 					    <div class="full-width col-form-input">
-						    <input class="form-control" type="text" placeholder="&#34;Стигмалион&#34; К. Старк и т.д.">
+						    <input class="form-control" type="text" placeholder="&#34;Стигмалион&#34; К. Старк и т.д." name="new">
 					    </div>
 					</div>
 
@@ -267,7 +267,85 @@
 
 			<!-- Submit button -->
 			<div class="content-small-block">
-				<button type="button" class="btn btn-primary">Отправить <i class="glyphicon glyphicon-send" aria-hidden="true"></i></button>
+				<!-- <button name="submit" type="button" class="btn btn-primary">Отправить <i class="glyphicon glyphicon-send" aria-hidden="true"></i></button> -->
+				<p><input type="submit" value="Submit" name="submit" /></p>
+			</div>
+		</form>
+
+		<div class="content {PROFILE}">
+			<div class="content-block bottom-border">
+				<h3 class="content-header">Приветствуем Вас, {LOGIN}!</h3>
+				<div class="content-block">
+					<!-- Username -->
+					<div class="row">
+						<div>
+							<p class="col-form-label">Имя/Логин</p>
+						</div>
+					    <div class="full-width col-form-input">
+						    <p>{LOGIN}</p>
+					    </div>
+					</div>
+
+					<div class="row">
+						<!-- Sex -->
+						<div class="half-block">
+							<div>
+							    <p class="col-form-label">Пол</p>
+							</div>
+							<div class="middle-block">
+							    <div class="radio-input">
+							        <input type="radio" name="sexRadios" value="Female" checked> Женский
+							    </div>
+							    <div class="radio-input">
+							        <input type="radio" name="sexRadios" value="Male"> Мужской
+							    </div>
+							</div>
+						</div>
+
+						<!-- Age -->
+						<div class="half-block">
+							<div>
+								<p class="col-form-label">Возраст</p>
+							</div>
+						    <div class="col-form-input">
+							    <input class="form-control" type="text" name="age">
+						    </div>
+						</div>
+					</div>
+
+					<div class="row">
+						<!-- Address -->
+						<div class="half-block">
+							<div>
+								<p class="col-form-label">Страна/Город</p>
+							</div>
+						    <div class="col-form-input">
+							    <input class="form-control" type="text" name="address">
+						    </div>
+						</div>
+
+						<!-- Phone number -->
+						<div class="half-block">
+							<div>
+								<p class="col-form-label">Телефон</p>
+							</div>
+						    <div class="col-form-input">
+							    <input class="form-control" type="text" name="phone">
+						    </div>
+						</div>
+					</div>
+
+					<!-- Email -->
+					<div class="row">
+						<div>
+							<p class="col-form-label">Email</p>
+						</div>
+					    <div class="col-form-input full-width">
+						    <input class="form-control" type="text" name="email">
+					    </div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
