@@ -57,7 +57,7 @@
 			</div>
 
 			<!-- Sidebar text -->
-			<div class="sidebar-block">
+			<div class="sidebar-block {FORM}">
 				<p>
 					Приветствуем Вас на нашем портале!
 				</p>
@@ -83,8 +83,31 @@
 				</p>
 			</div>
 
+			<div class="sidebar-block {PROFILE}">
+				<p>
+					Добро пожаловать!
+				</p>
+				<p>
+					Целью данного ресурса является предоставление некоторых рекомендаций по подбору
+					книг. На нашем сайте Вы можете найти как и последние новинки, так и полюбившуюся 
+					классику.
+				</p>
+				<p>
+					Предоставленная информация поможет нам двигаться вперед. Мы гарантируем 
+					полную анонимность и неразглашение полученных данных. Информация о книгах,
+					авторах, а также Ваши отзывы будут использованы для составления рейтингов книг и
+					формирования содержимого сайта.
+				</p>
+				<p>
+					Спасибо за Вашу помощь! : )
+				</p>
+				<p>
+					P.S. Если у вас возникли вопросы, свяжитесь с нами, воспользовавшись ссылками <i class="fa fa-arrow-down" aria-hidden="true"></i>
+				</p>
+			</div>
+
 			<!-- Contact links -->
-			<p class="social">
+			<p class="social sidebar-block">
 				<!-- Facebook -->
     			<a href="https://www.facebook.com/profile.php?id=100009160726263" target="_blank">
         			<i class="socicon-facebook"></i>
@@ -209,7 +232,7 @@
 							<p class="col-form-label">Любимые авторы</p>
 						</div>
 					    <div class="full-width col-form-input">
-						    <input class="form-control" type="text" placeholder="Агата Кристи, Стивен Кинг и т.д." name="author">
+						    <input class="form-control" type="text" placeholder="Агата Кристи, Стивен Кинг и т.д." name="authors">
 					    </div>
 					</div>
 
@@ -229,7 +252,7 @@
 							<p class="col-form-label">Новинки, которые вы бы хотели прочитать</p>
 						</div>
 					    <div class="full-width col-form-input">
-						    <input class="form-control" type="text" placeholder="&#34;Стигмалион&#34; К. Старк и т.д." name="new">
+						    <input class="form-control" type="text" placeholder="&#34;Стигмалион&#34; К. Старк и т.д." name="news">
 					    </div>
 					</div>
 
@@ -267,84 +290,75 @@
 
 			<!-- Submit button -->
 			<div class="content-small-block">
-				<!-- <button name="submit" type="button" class="btn btn-primary">Отправить <i class="glyphicon glyphicon-send" aria-hidden="true"></i></button> -->
-				<p><input type="submit" value="Submit" name="submit" /></p>
+				<button name="submit" type="submit" class="btn btn-primary">Отправить <i class="glyphicon glyphicon-send" aria-hidden="true"></i></button>
 			</div>
 		</form>
 
 		<div class="content {PROFILE}">
-			<div class="content-block bottom-border">
-				<h3 class="content-header">Приветствуем Вас, {LOGIN}!</h3>
+			<div class="content-block ">
+				<h3 class="content-header">Приветствуем Вас{NAME}!</h3>
+				<div class="content-block bottom-border">
+					<p>
+						Спасибо, что уделили немного времени, чтобы заполнить анкету. Полученная информация поможет усовершенствовать 
+						сайт и сделать его еще более полезным! <i class="glyphicon glyphicon-grain" aria-hidden="true"></i>
+					</p>
+				</div>
 				<div class="content-block">
 					<!-- Username -->
-					<div class="row">
-						<div>
-							<p class="col-form-label">Имя/Логин</p>
-						</div>
-					    <div class="full-width col-form-input">
-						    <p>{LOGIN}</p>
-					    </div>
+					<div class="row {PRINT_LOGIN}">
+						<span class="col-form-label column">Имя/Логин</span>
+					    <span class="entered-info">{LOGIN}</span>
 					</div>
 
-					<div class="row">
-						<!-- Sex -->
-						<div class="half-block">
-							<div>
-							    <p class="col-form-label">Пол</p>
-							</div>
-							<div class="middle-block">
-							    <div class="radio-input">
-							        <input type="radio" name="sexRadios" value="Female" checked> Женский
-							    </div>
-							    <div class="radio-input">
-							        <input type="radio" name="sexRadios" value="Male"> Мужской
-							    </div>
-							</div>
-						</div>
-
-						<!-- Age -->
-						<div class="half-block">
-							<div>
-								<p class="col-form-label">Возраст</p>
-							</div>
-						    <div class="col-form-input">
-							    <input class="form-control" type="text" name="age">
-						    </div>
-						</div>
+					<!-- Age -->
+					<div class="row {PRINT_AGE}">
+						<span class="col-form-label column">Возраст</span>
+					    <span class="entered-info">{AGE}</span>
 					</div>
 
-					<div class="row">
-						<!-- Address -->
-						<div class="half-block">
-							<div>
-								<p class="col-form-label">Страна/Город</p>
-							</div>
-						    <div class="col-form-input">
-							    <input class="form-control" type="text" name="address">
-						    </div>
-						</div>
+					<!-- Address -->
+					<div class="row {PRINT_ADDRESS}">
+						<span class="col-form-label column">Адрес</span>
+					    <span class="entered-info">{ADDRESS}</span>
+					</div>
 
-						<!-- Phone number -->
-						<div class="half-block">
-							<div>
-								<p class="col-form-label">Телефон</p>
-							</div>
-						    <div class="col-form-input">
-							    <input class="form-control" type="text" name="phone">
-						    </div>
-						</div>
+					<!-- Phone -->
+					<div class="row {PRINT_PHONE}">
+						<span class="col-form-label column">Телефон</span>
+					    <span class="entered-info">{PHONE}</span>
 					</div>
 
 					<!-- Email -->
-					<div class="row">
-						<div>
-							<p class="col-form-label">Email</p>
-						</div>
-					    <div class="col-form-input full-width">
-						    <input class="form-control" type="text" name="email">
-					    </div>
+					<div class="row {PRINT_EMAIL}">
+						<span class="col-form-label column">Email</span>
+					    <span class="entered-info">{EMAIL}</span>
+					</div>
+				</div>
+
+				<div class="content-block">
+					<!-- Genres -->
+					<div class="row {PRINT_GENRES}">
+						<span class="col-form-label column">Предпочитаемые жанры</span>
+					    <span class="entered-info">{GENRES}</span>
 					</div>
 
+					<!-- Authors -->
+					<div class="row {PRINT_AUTHORS}">
+						<span class="col-form-label column">Любимые авторы</span>
+					    <span class="entered-info">{AUTHORS}</span>
+					</div>
+
+					<!-- Books -->
+					<div class="row {PRINT_BOOKS}">
+						<span class="col-form-label column">Интересные книги</span>
+					    <span class="entered-info">{BOOKS}</span>
+					</div>
+
+					<!-- News -->
+					<div class="row {PRINT_NEWS}">
+						<span class="col-form-label column">Заинтересовавшие новинки</span>
+					    <span class="entered-info">{NEWS}</span>
+					</div>
 				</div>
 			</div>
 		</div>

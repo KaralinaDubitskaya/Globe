@@ -9,7 +9,6 @@ p {
 li {
 	font-size: 18px;
 }
-
 .top {
 	border-bottom: solid 1px #bfbfbf;	
 	background: #87ceeb;
@@ -179,6 +178,7 @@ li {
 	width: 75%;
 	padding: 2%;
 	padding-bottom: 5vh;
+	min-height: 100vh;
 }
 
 .content-block {
@@ -228,9 +228,19 @@ li {
 	color: #82afc3;
 }
 
+.entered-info {
+	color: #02778d;
+	font-size: 17px;
+	margin-left: 10px;
+}
+
 .col-form-label {
 	display: inline-block;
 	padding: 10px;
+}
+
+.column {
+	min-width: 300px;
 }
 
 .col-form-input {
